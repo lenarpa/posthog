@@ -1,0 +1,28 @@
+.PropertyFilterButton {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+    overflow: hidden;
+    text-shadow: none;
+    background: var(--border);
+    border-color: transparent;
+    box-shadow: none;
+    transition-duration: 200ms; // Shorten from Ant's 300ms
+
+    &:hover,
+    &:focus {
+        color: var(--text-default);
+        background: var(--border);
+        border-color: var(--border);
+    }
+
+    > :not(.PropertyFilterButton-content) {
+        flex-shrink: 0;
+    }
+
+    .PropertyFilterButton-content {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
